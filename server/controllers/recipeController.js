@@ -167,15 +167,19 @@ exports.submitRecipeOnPost = async(req, res) => {
 }
 
 /**
- * Deleting Recipe
+ * POST /delete-recipe/:id
+ * Delete Recipe by ID
  */
-// async function deleteRecipe(){
-//   try {
-//     await Recipe.deleteOne({ name: ''});
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
+exports.deleteRecipeById = async (req, res) => {
+  try {
+    const recipeId = req.params.id;
+    await Recipe.findByIdAndDelete(recipeId);
+    res.redirect('/explore-latest'); // Redirect to a relevant page after deletion
+  } catch (error) {
+    res.status(500).send({ message: error.message || "Error Occurred" });
+  }
+}
+
 
 /**
  * GET /about-page

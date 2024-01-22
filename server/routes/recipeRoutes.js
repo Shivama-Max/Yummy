@@ -15,5 +15,6 @@ router.get('/explore-random', recipeController.exploreRandom);
 router.get('/submit-recipe', recipeController.submitRecipe);
 router.post('/submit-recipe', recipeController.submitRecipeOnPost);
 router.get('/about', recipeController.about);
+router.post('/delete-recipe/:id', recipeController.deleteRecipeById);
 
 module.exports = router;
