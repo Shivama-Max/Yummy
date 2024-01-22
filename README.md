@@ -26,7 +26,7 @@ Functionality to delete a recipe by ID.
 8. About Page :
 Learn more about the Yummy Food Blogging Website & Me.
 ## Getting Started
-- Clone the repository: git clone https://github.com/your-username/your-repository.git
+- Clone the repository: git clone https://github.com/Shivama-Max/Yummy.git
 - Install dependencies: npm install
 - Set up a MongoDB database and update the connection details in the database.js file.
 - Start the server: npm start
